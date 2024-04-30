@@ -1,11 +1,11 @@
 const axios = require('axios');
 const userData = require('../applicationData/applicationData');
 
-const getHoldings = async(req,res)=>{
+const getPositions = async(req,res)=>{
     let config = {
         method: 'get',
         maxBodyLength: Infinity,
-        url: 'https://api.upstox.com/v2/portfolio/long-term-holdings',
+        url: 'https://api.upstox.com/v2/portfolio/short-term-positions',
         headers: { 
           'Accept': 'application/json'
         }
@@ -14,8 +14,9 @@ const getHoldings = async(req,res)=>{
 
     const response = await axios(config);
     res.send(response.data);
+    
 };
 
 module.exports = {
-    getHoldings
+    getPositions
 };

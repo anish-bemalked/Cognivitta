@@ -4,6 +4,6 @@ const data = require('../applicationData/applicationData');
 
 const router = Router();
 
-router.get('/',controller.getHoldings)
+router.get('/',controller.getPositions)
 
 module.exports = router;
