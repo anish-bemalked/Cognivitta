@@ -10,7 +10,7 @@ const getPositions = async (req, res) => {
       Accept: "application/json",
     },
   };
-  config.headers["Authorization"] = `Bearer ${applicationData.accessTocken}`;
+  config.headers["Authorization"] = `Bearer ${req.body.token}`;
 
   const response = await axios(config);
   res.send(response.data);

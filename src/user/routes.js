@@ -1,10 +1,10 @@
-const { Router } = require('express');
-const controller = require('./controller');
-const data = require('../applicationData/applicationData');
+const { Router } = require("express");
+const controller = require("./controller");
+const data = require("../applicationData/applicationData");
 
 const router = Router();
 
-router.get('/profile',controller.getProfile);
-router.get('/funds',controller.getFunds);
+router.post("/profile", controller.getProfile);
+router.post("/funds", controller.getFunds);
 
 module.exports = router;

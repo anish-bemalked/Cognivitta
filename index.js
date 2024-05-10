@@ -7,6 +7,8 @@ const app = express();
 app.use(cors());
 const axios = require("axios");
 
+app.use(express.json());
+
 const loginRoutes = require("./src/login/routes");
 const userRoutes = require("./src/user/routes");
 const holdingsRoutes = require("./src/holdings/routes");
