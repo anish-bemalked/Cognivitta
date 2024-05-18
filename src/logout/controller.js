@@ -1,10 +1,10 @@
 const axios = require("axios");
 
-const getLPT = async (req, res) => {
+const logout = async (req, res) => {
   let config = {
-    method: "get",
+    method: "delete",
     maxBodyLength: Infinity,
-    url: `https://api.upstox.com/v2/market-quote/ltp?instrument_key=${req.body.instrument_token}`,
+    url: "https://api.upstox.com/v2/logout",
     headers: {
       Accept: "application/json",
     },
@@ -13,9 +13,9 @@ const getLPT = async (req, res) => {
 
   const response = await axios(config);
 
-  res.send(Object.values(response.data.data)[0]);
+  res.send(response.data);
 };
 
 module.exports = {
-  getLPT,
+  logout,
 };

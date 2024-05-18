@@ -1,5 +1,4 @@
 const axios = require("axios");
-const applicationData = require("../applicationData/applicationData");
 
 const getPositions = async (req, res) => {
   let config = {
