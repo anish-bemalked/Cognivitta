@@ -93,6 +93,12 @@ const getHoldings = async (req, res) => {
   res.send(updatedHoldings);
 };
 
+const editLabel = async (req, res) => {
+  await DBhandler.updatelabel(req.body);
+  res.send("Edited");
+};
+
 module.exports = {
   getHoldings,
+  editLabel,
 };

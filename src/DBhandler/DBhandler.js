@@ -144,14 +144,7 @@ const updateQuantity = (data) => {
 
 const updatelabel = (data) => {
   return new Promise((resolve, reject) => {
-    const {
-      instrument_token,
-      tradingsymbol,
-      quantity,
-      average_price,
-      t1_quantity,
-      label,
-    } = data;
+    const { instrument_token, label } = data;
 
     pool.query(
       queries.getHoldingsByIsin,
